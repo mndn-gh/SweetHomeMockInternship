@@ -117,6 +117,7 @@ public class FileUserPreferences extends UserPreferences {
   private static final String FURNITURE_WIDTH                           = "furnitureWidth#";
   private static final String FURNITURE_DEPTH                           = "furnitureDepth#";
   private static final String FURNITURE_HEIGHT                          = "furnitureHeight#";
+  private static final String FURNITURE_VOLUME                          = "furnitureVolume#";
   private static final String FURNITURE_MOVABLE                         = "furnitureMovable#";
   private static final String FURNITURE_DOOR_OR_WINDOW                  = "furnitureDoorOrWindow#";
   private static final String FURNITURE_ELEVATION                       = "furnitureElevation#";
@@ -693,6 +694,7 @@ public class FileUserPreferences extends UserPreferences {
     float width = preferences.getFloat(FURNITURE_WIDTH + index, 0.1f);
     float depth = preferences.getFloat(FURNITURE_DEPTH + index, 0.1f);
     float height = preferences.getFloat(FURNITURE_HEIGHT + index, 0.1f);
+    float volume = preferences.getFloat(FURNITURE_VOLUME + index, 0.1f);
     boolean movable = preferences.getBoolean(FURNITURE_MOVABLE + index, false);
     boolean doorOrWindow = preferences.getBoolean(FURNITURE_DOOR_OR_WINDOW + index, false);
     float elevation = preferences.getFloat(FURNITURE_ELEVATION + index, 0);
@@ -957,6 +959,7 @@ public class FileUserPreferences extends UserPreferences {
           preferences.putFloat(FURNITURE_WIDTH + i, piece.getWidth());
           preferences.putFloat(FURNITURE_DEPTH + i, piece.getDepth());
           preferences.putFloat(FURNITURE_HEIGHT + i, piece.getHeight());
+          preferences.putFloat(FURNITURE_VOLUME + i, piece.getVolume());
           preferences.putBoolean(FURNITURE_MOVABLE + i, piece.isMovable());
           preferences.putBoolean(FURNITURE_DOOR_OR_WINDOW + i, piece.isDoorOrWindow());
           preferences.putFloat(FURNITURE_ELEVATION + i, piece.getElevation());
@@ -989,6 +992,7 @@ public class FileUserPreferences extends UserPreferences {
       preferences.remove(FURNITURE_WIDTH + i);
       preferences.remove(FURNITURE_DEPTH + i);
       preferences.remove(FURNITURE_HEIGHT + i);
+      preferences.remove(FURNITURE_VOLUME + i);
       preferences.remove(FURNITURE_MOVABLE + i);
       preferences.remove(FURNITURE_DOOR_OR_WINDOW + i);
       preferences.remove(FURNITURE_ELEVATION + i);
