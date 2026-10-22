@@ -161,10 +161,6 @@ public class DefaultFurnitureCatalog extends FurnitureCatalog {
      */
     HEIGHT("height"),
     /**
-     * The key for the volume in cubed centimeters of a piece of furniture (mandatory).
-     */
-    VOLUME("volume"),
-    /**
      * The key for the movability of a piece of furniture (mandatory).
      * If the value of this key is <code>true</code>, the piece of furniture
      * will be considered as a movable piece. 
@@ -922,4 +918,3 @@ public class DefaultFurnitureCatalog extends FurnitureCatalog {
     }
   }
 }
-
